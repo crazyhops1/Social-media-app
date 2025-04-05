@@ -34,7 +34,7 @@ const Profile = () => {
         formData.append('image', newProfile); // Attach the selected file
       
         // Send the image to the server
-        const response = await axios.put(`${url}/user/update-profile.onrender.com`, formData, {
+        const response = await axios.put(`${url}/user/update-profile`, formData, {
           headers: {
             'Content-Type': 'multipart/form-data', // Ensure that the server knows this is a file upload
           },
@@ -53,7 +53,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${url}/user/get-user-profile.onrender.com`,{
+        const response = await axios.get(`${url}/user/get-user-profile`,{
 withCredentials:true
         });
      
@@ -66,7 +66,7 @@ withCredentials:true
 
     const fetchPosts = async () => {
       try {
-        const response = await axios.get(`${url}/post/all-post-profile.onrender.com`,{withCredentials:true});
+        const response = await axios.get(`${url}/post/all-post-profile`,{withCredentials:true});
         setPosts(response.data.posts.reverse());
       } catch (error) {
       }

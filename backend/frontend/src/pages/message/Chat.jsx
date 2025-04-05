@@ -24,7 +24,7 @@ const Chat = () => {
   useEffect(() => {
     const fetchMessageHistory = async () => {
       try {
-        const response = await axios.get(`${url}/message/get-message/${id}.onrender.com`, { withCredentials: true });
+        const response = await axios.get(`${url}/message/get-message/${id}`, { withCredentials: true });
         setMessages(response.data.message);
       } catch (error) {
 
@@ -61,7 +61,7 @@ const Chat = () => {
 
     try {
       const response = await axios.post(
-        `${url}/message/send-message/${id}.onrender.com`,
+        `${url}/message/send-message/${id}`,
         { message: messageInput },
         { withCredentials: true }
       );
