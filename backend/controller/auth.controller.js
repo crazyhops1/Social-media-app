@@ -82,7 +82,7 @@ export const loginAccount = async (req, res) => {
         res.cookie('user',token , {
             maxAge: 15 * 24 * 60 * 60 * 1000, // Cookie expiration time (15 days)
             httpOnly: true,  // Makes it inaccessible to JavaScript
-            secure: false, // Use HTTPS in production
+            secure:  process.env.NODE_ENV === 'production', // true in production for HTTPS
             sameSite: 'Strict', // Helps prevent CSRF attacks
         });
 
