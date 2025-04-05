@@ -84,7 +84,7 @@ if(description.length<10){
 
     try {
       // Make the POST request
-      const response = await axios.post(`${url}/post/create-post`, formData, {
+      const response = await axios.post(`${url}/post/create-post.onrender.com`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data', // Make sure to specify the content type
         },

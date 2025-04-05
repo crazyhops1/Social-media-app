@@ -26,7 +26,7 @@ const User = () => {
       try {
         // Make a POST request to follow the user
         await axios.get(
-          `${url}/user/follow-user/${id}`,
+          `${url}/user/follow-user/${id}.onrender.com`,
 { withCredentials: true } // Correctly pass the withCredentials flag in config
         );
         setCheckFollow('unfollow'); // Update the state to 'unfollow' after a successful follow
@@ -37,7 +37,7 @@ const User = () => {
       try {
         // Make a POST request to unfollow the user
         await axios.get(
-          `${url}/user/unfollow-user/${id}`,
+          `${url}/user/unfollow-user/${id}.onrender.com`,
    
           { withCredentials: true }
         );
@@ -64,7 +64,7 @@ const User = () => {
 
       try {
         // Fetching user data
-        const userResponse = await axios.get(`${url}/user/get-user-id/${id}`,{withCredentials:true});
+        const userResponse = await axios.get(`${url}/user/get-user-id/${id}.onrender.com`,{withCredentials:true});
         setData(userResponse.data.data);
        
 
@@ -90,7 +90,7 @@ const User = () => {
   useEffect(()=>{
     const fetchPosts = async () => {
       try {
-        const response = await axios.get(`${url}/post/all-post-user/${id}`, { withCredentials: true });
+        const response = await axios.get(`${url}/post/all-post-user/${id}.onrender.com`, { withCredentials: true });
         setPosts(response.data.posts); // Set posts data correctly
       } catch (error) {
         setError("Error fetching posts.");

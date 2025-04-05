@@ -23,7 +23,7 @@ const Message = ({onlineUsers}) => {
     const fetchUserHistory = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`${url}/message/get-user-history`, { withCredentials: true });
+        const response = await axios.get(`${url}/message/get-user-history.onrender.com`, { withCredentials: true });
         setUserChatHistory(response.data.data); // Set the chat history
       } catch (error) {
         setError('Failed to fetch chat history. Please try again later.');

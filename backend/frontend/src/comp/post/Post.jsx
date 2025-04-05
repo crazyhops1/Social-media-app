@@ -55,10 +55,10 @@ export default function RecipeReviewCard() {
 
     try {
       if (newLikeStatus) {
-      await axios.get(`${url}/post/like-post/${postId}`,{withCredentials: true});
+      await axios.get(`${url}/post/like-post/${postId}.onrender.com`,{withCredentials: true});
 
       } else {
-        await axios.delete(`${url}}/post/unlike-post/${postId}`,{withCredentials: true});
+        await axios.delete(`${url}}/post/unlike-post/${postId}.onrender.com`,{withCredentials: true});
       }
     } catch (error) {
       console.error('Error updating the like status:', error);
@@ -72,7 +72,7 @@ export default function RecipeReviewCard() {
      
 
       try {
-        const response = await axios.get(`${url}/post/timeline`,{
+        const response = await axios.get(`${url}/post/timeline.onrender.com`,{
           withCredentials: true
         });
         setPosts(response.data.reverse());

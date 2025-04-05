@@ -35,7 +35,7 @@ const navigate=useNavigate()
     }
 
     try {
-      const response = await axios.post(`${url}/auth/create-account`, data);
+      const response = await axios.post(`${url}/auth/create-account.onrender.com`, data);
       if (response.status === 201) {
         toast.success('Account created successfully!');  // Show success toast
 

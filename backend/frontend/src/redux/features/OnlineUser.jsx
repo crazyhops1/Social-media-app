@@ -44,7 +44,7 @@ export const useSocketConnection = () => {
   useEffect(() => {
     const self = localStorage.getItem('ul'); // Get the logged-in user's ID from localStorage
     if (self) {
-      const socket = io(`${url}`, { query: { userid: self } });
+      const socket = io(`${url}.onrender.com`, { query: { userid: self } });
 
       // Listen for connected users and dispatch to Redux
       socket.on('connectedUser', (user) => {

@@ -38,7 +38,7 @@ const Login = () => {
       setLoading(true);  // Start loading
 
       // Make the POST request with withCredentials: true to send cookies
-      const response = await axios.post(`${url}/auth/login`, data, { 
+      const response = await axios.post(`${url}/auth/login.onrender.com`, data, { 
         withCredentials: true
       });
 

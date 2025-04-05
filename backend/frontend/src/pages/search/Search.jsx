@@ -28,7 +28,7 @@ const Search = () => {
       setLoading(true);  // Set loading to true while data is being fetched
       setError(null);  // Reset error state
       try {
-        const response = await axios.post(`${url}/user/get-user-username`, { userName: value }, {
+        const response = await axios.post(`${url}/user/get-user-username.onrender.com`, { userName: value }, {
           withCredentials: true
         });
         
