@@ -18,7 +18,7 @@ import Message from './pages/message/Message';
 import Chat from './pages/message/Chat';
 import { useSelector } from 'react-redux';
 import { useSocketConnection } from './redux/features/OnlineUser';
-   export const url ='https://api.render.com/deploy/srv-cvo1mq24d50c739bd850?key=oJ5ubZLfcrA'
+   export const url ='https://social-media-app-eut8.onrender.com'
 const App = () => {
   const Users = useSelector((state) => state.socket.connectedUser);
 
